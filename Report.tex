@@ -1,0 +1,83 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{xlop}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+\usepackage[T1]{fontenc}
+
+\renewcommand{\FrenchLabelItem}{\textbullet}
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{B}{>{\bfseries}c}
+\frenchbsetup{ReduceListSpacing=false}
+\setlength{\parsep}{\parskip}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\titleAT}{\begingroup % Create the command for including the title page in the document
+\newlength{\drop} % Command for generating a specific amount of whitespace
+\drop=0.07\textheight % Define the command as 10% of the total text height
+
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+
+\vspace{\drop} % Whitespace between the top lines and title
+\centering % Center all text
+{\Huge Robot}\\ % Title
+
+\vspace{\drop} % Whitespace between the title and short horizontal line
+\rule{0.3\textwidth}{0.4pt}\par % Short horizontal line under the title
+\vspace{\drop} % Whitespace between the thin horizontal line and the author name
+
+{\large \textsc{Adan Häfliger, Jonathan Link \& Xavier Willemin}}\par % Author name
+
+\bigskip
+\bigskip
+
+{\small \textsc{26 mai 2017}}\par % Date
+
+\vfill % Whitespace
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.35]{Cover.jpg}
+\end{figure}
+
+\bigskip
+
+\rule{\textwidth}{0.4pt}\par % Thin horizontal line
+\vspace{2pt}\vspace{-\baselineskip} % Whitespace between lines
+\rule{\textwidth}{1pt}\par % Thick horizontal line
+
+\thispagestyle{empty}
+
+\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	END TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\titleAT
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+
+\end{document}
