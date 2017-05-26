@@ -119,8 +119,8 @@ These obstacles can be triggered by other players connected to the host (the com
 The minimap also shows the position of the obstacles that can be triggered by the network players. Clicking on them activates the obstacle.
 
 \begin{figure}[h]
-   \caption{\label{étiquette} The players on the client application can trigger the obstacles over the Internet.}
-   \includegraphics[scale=0.7]{images/minimap.png}
+   \caption{\label{étiquette} The players of the minimap can trigger the obstacles over the Internet.}
+   \includegraphics[scale=0.8]{images/minimap.png}
 \end{figure}
 
 \section{Running the project}
@@ -145,8 +145,13 @@ As for any virtual reality project, both the hardware and software requirements 
 	\item Place a chair in the tracking area and sit on it once you wear the HMD and have the controllers in your hands.
 	\item Launch the .exe file (or ask somebody to do it for you). Note that the game will be oriented with respect to the orientation of the HMD at the moment of the launch.
 	\item Since you will use the 3D orientation of the controllers to move the robot and its arms, you now have to calibrate the neutral orientation of the controllers. So relax and once you are in a comfortable position, stay more or less steady with your hands and click on one of the grip buttons (the rounded-rectangles on the handle under your palm) of one of the controllers. This step will also reliably compute which controller is in your left hand and which one is in your right one.
-	\item You are now ready to play ! You can take your time at this point in the yellow zone, but be careful ; once you are on the checkered-flag pathway the time starts ticking...
+	\item You are now ready to play ! You can take your time at this point in the yellow zone, but be careful ; once you are on the checkered-flag pathway the time starts ticking... (see figure below)
 \end{enumerate}
+
+\begin{figure}[!h]
+   \caption{\label{étiquette} Top view of the level}
+   \includegraphics[scale=0.53]{images/topview.png}
+\end{figure}
 
 Hint : if you do not want to move the robot but still need to move your hands, you can hold the trigger of both controllers. This will indeed disengage the controllers as a way to move the robot and move the canons instead.
 
@@ -215,7 +220,17 @@ To make the game more dynamic and pleasant to play, we added some little animati
 	\item The turrets : \href{https://www.assetstore.unity3d.com/en/#!/content/9872}{www.assetstore.unity3d.com/en/\#!/content/9872}
 \end{itemize}
 
-Our own components like the cockpit and the canons have been designed with Blender.
+Our own components like the cockpit and the canons have been designed with Blender (see figures below).
+
+\begin{figure}[!h]
+   \caption{\label{étiquette} Outside view of the robot}
+   \includegraphics[scale=0.53]{images/ship.png}
+\end{figure}
+
+\begin{figure}[h]
+   \caption{\label{étiquette} View from the cockpit}
+   \includegraphics[scale=1]{images/cockpit.png}
+\end{figure}
 
 \section{Unity Specifics}
 
@@ -255,34 +270,6 @@ We did not expect to spend so much time on what we thought were basic features, 
 The video providing an overview of our game is available on YouTube at this address : \href{https://www.youtube.com/watch?v=8nC1i0AayuY}{www.youtube.com/watch?v=8nC1i0AayuY}. Feel free to share it broadly and use it as you want.
 
 The codebase is entirely available on GitHub at this address : \href{https://github.com/Ahaeflig/VR6}{www.github.com/Ahaeflig/VR6}. We encourage you to submit issues and/or pull requests on the project if you want to collaborate and participate to the development of the game.
-
-\newpage
-
-\section{Images}
-\begin{figure}[h]
-   \caption{\label{étiquette} view from the cockpit designed by ourself}
-   \includegraphics[scale=1]{images/cockpit.png}
-\end{figure}
-
-\begin{figure}[h]
-   \caption{\label{étiquette} level 1 - low poly style}
-   \includegraphics[scale=1]{images/level.png}
-\end{figure}
-
-\begin{figure}[!h]
-   \caption{\label{étiquette} outside view of the ship piloted by player 1 with the htc vive}
-   \includegraphics[scale=0.6]{images/ship.png}
-\end{figure}
-
-\begin{figure}[!h]
-   \caption{\label{étiquette} top view of level 1 - the orange platform is the start and the green ones are different finishes}
-   \includegraphics[scale=0.6]{images/topview.png}
-\end{figure}
-
-\begin{figure}[!h]
-   \caption{\label{étiquette} a wall triggered by player 2 with the tablet}
-   \includegraphics[scale=0.6]{images/wall.png}
-\end{figure}
 
 
 \end{document}
