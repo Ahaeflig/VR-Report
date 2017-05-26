@@ -145,9 +145,25 @@ public class BlockMessage : MessageBase {
 To make the game more dynamic and pleasant to play we added some little animations. The clouds are moving in the sky, the water is animated as well and the finish green platforms moves to add a little difficulty. There is also some distance fog to increase the depth perception. We also took some time to make sure the environment stays coherent in terms of colors and aesthetic when we downloaded the assets or created ours.  
 
 \section{Unity Specifics}
-Here we want to mention some key unity implementation that are worth mentioning. \\\\
+Here we want to mention some key unity implementation that are worth mentioning. \\
 
-We used the OpenVR plugin to ... TODO
+We used the OpenVR plugin to integrate the HMD into our game by dragging the SteamVR prefab and the Camera rig into the scene. Since our game is a seated experience we changed the "Tracking Space" parameter of the SteamVR prefab to "Tracking Universe Seated" and we use the following code to reset the initial position of the camera: \\
+
+\begin{lstlisting}
+Valve.VR.OpenVR.System.ResetSeatedZeroPose ();
+Valve.VR.OpenVR.Compositor.SetTrackingSpace (
+    Valve.VR.ETrackingUniverseOrigin.TrackingUniverseSeated);
+\end{lstlisting}
+
+Also the ResetCam.cs script makes the CameraRig follow the robot since it is not recommended to make the CameraRig a child of the vehicle directly. \\
+
+To be able to develop the game without access to the HMD we implemented keyboard controls and we also found out how to disable the OpenVR plugin to remove errors. To do this, you simply add an empty Virtual Reality SDK "None" above OpenVR in Edit->Project Settings->Player. \\ 
+
+We used rigidbody physic to move the robot. To achieve this we changed the max angular velocity of the robot rigidbody as well as good drag and angular drag values such that the robot doesn't have too much inertia but still feels like a vehicle. Then to move the robot we add relative forces and torque. \\
+
+We also made a set of prefabs to ease the development of levels. That way we can instantly set up a new level simply by importing the "LevelSetup" prefab and a vehicle and all the VR code is directly in the scene. The game could easily be expanded with more levels in that manner. \\
+
+
 
 
 \section{Video}
