@@ -81,19 +81,22 @@
 \newpage
 
 \section{The game}
-One player has 2 minutes to go from the start of the level to one of the 3 available finish platforms. A second player must do everything to slow the progression of the first player by triggering obstacles at distance through a tablet.
+In our application we developed an original control scheme for controlling a vehicle in a virtual world using the HTC-Vive hardware. The player is immersed inside the vehicle and uses the Vive controller to move the vehicle. The game is called GAMENAME as bla TODO. We also implemented an asymmetric gameplay where multiple players interact in the same world using only a single HMD and a tablet.
+One player has 2 minutes to go from the start of the level to one of the 3 available finish platforms using the vehicle and the HMD. A second player must do everything to slow the progression of the first player by triggering obstacles at distance through a tablet.
 
 \section{The controllers}
 \todo[inline]{TO COMPLETE}
 
+
 \section{Applications}
 We built two independent applications. One for each player. The two applications communicate through the internet network.
+
 
 \subsection{Level (Host)}
 One application handles the HTC VIVE controllers and displays the 3D world containing the game level.
 
 \subsection{Minimap (Client)}
-The second application can be run on a tablet and displays a top-view map of the level. Through this app the second player can see  player 1 location and is able to trigger the walls distantly.
+The second application can be run on a tablet and displays a top-view map of the level. Through this app the second player can see the first player's location and is able to trigger the walls distantly.
 
 \subsection{Wall obstacles}
 There are two types of wall obstacles.
@@ -104,7 +107,7 @@ There are two types of wall obstacles.
 \end{itemize}
 
 \section{Networking}
-Here is the list of all the possible messages that can be exchanges between the host and the client.
+Here is the list of all the possible messages that can be exchanged between the host and the client.
 
 \begin{itemize}  
 \item GetBlocks 
@@ -141,8 +144,17 @@ public class BlockMessage : MessageBase {
 \subsection{Some graphical details}
 To make the game more dynamic and pleasant to play we added some little animations. The clouds are moving in the sky, the water is animated as well and the finish green platforms moves to add a little difficulty. There is also some distance fog to increase the depth perception. We also took some time to make sure the environment stays coherent in terms of colors and aesthetic when we downloaded the assets or created ours.  
 
+\section{Unity Specifics}
+Here we want to mention some key unity implementation that are worth mentioning. \\\\
+
+We used the OpenVR plugin to ... TODO
+
+
 \section{Video}
 The video is available here: \todo[inline]{TO COMPLETE}
+
+
+
 
 \newpage
 
